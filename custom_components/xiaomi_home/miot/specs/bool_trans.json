@@ -58,7 +58,7 @@
         "urn:miot-spec-v2:property:wifi-ssid-hidden:000000E3": "yes_no",
         "urn:miot-spec-v2:property:wind-reverse:00000117": "yes_no",
         "urn:miot-spec-v2:property:motion-state:0000007D": "motion_state",
-        "urn:miot-spec-v2:property:contact-state:0000007C": "open_close"
+        "urn:miot-spec-v2:property:contact-state:0000007C": "close_open"
     },
     "translate": {
         "default": {
@@ -197,38 +197,38 @@
                 "false": "動きが検出されません"
             }
         },
-        "contact_state": {
+        "close_open": {
             "zh-Hans": {
-                "true": "接触",
-                "false": "分离"
+                "true": "关闭",
+                "false": "开启"
             },
             "zh-Hant": {
-                "true": "接觸",
-                "false": "分離"
+                "true": "關閉",
+                "false": "開啟"
             },
             "en": {
-                "true": "Contact",
-                "false": "No Contact"
+                "true": "Close",
+                "false": "Open"
             },
             "de": {
-                "true": "Kontakt",
-                "false": "Kein Kontakt"
+                "true": "Schließen",
+                "false": "Öffnen"
             },
             "es": {
-                "true": "Contacto",
-                "false": "Sin contacto"
+                "true": "Cerrado",
+                "false": "Abierto"
             },
             "fr": {
-                "true": "Contact",
-                "false": "Pas de contact"
+                "true": "Fermer",
+                "false": "Ouvert"
             },
             "ru": {
-                "true": "Контакт",
-                "false": "Нет контакта"
+                "true": "Закрыть",
+                "false": "Открыть"
             },
             "ja": {
-                "true": "接触",
-                "false": "非接触"
+                "true": "閉じる",
+                "false": "開く"
             }
         }
     }
