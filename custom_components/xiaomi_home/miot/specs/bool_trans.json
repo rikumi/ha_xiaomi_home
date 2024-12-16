@@ -58,7 +58,7 @@
         "urn:miot-spec-v2:property:wifi-ssid-hidden:000000E3": "yes_no",
         "urn:miot-spec-v2:property:wind-reverse:00000117": "yes_no",
         "urn:miot-spec-v2:property:motion-state:0000007D": "motion_state",
-        "urn:miot-spec-v2:property:contact-state:0000007C": "contact_state"
+        "urn:miot-spec-v2:property:contact-state:0000007C": "open_close"
     },
     "translate": {
         "default": {
