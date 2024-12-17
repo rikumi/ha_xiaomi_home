@@ -255,7 +255,7 @@ class AirConditioner(MIoTServiceEntity, ClimateEntity):
     async def async_set_hvac_mode(self, hvac_mode: HVACMode) -> None:
         """Set new target hvac mode."""
         # set air-conditioner off
-        if hvac_mode == HVACMode.OFF:
+        if hvac_mode == HVACMode.OFF and self._prop_on:
             if not await self.set_property_async(
                     prop=self._prop_on, value=False):
                 raise RuntimeError(
@@ -263,8 +263,8 @@ class AirConditioner(MIoTServiceEntity, ClimateEntity):
                     f'{self.entity_id}')
             return
         # set air-conditioner on
-        elif self.get_prop_value(prop=self._prop_on) is False:
-            await self.set_property_async(prop=self._prop_on, value=True)
+        if hvac_mode != HVACMode.OFF and self.get_prop_value(prop=self._prop_on) is False:
+            await self.async_turn_on()
         # set mode
         mode_value = self.get_map_value(
             map_=self._hvac_mode_map, description=hvac_mode)
